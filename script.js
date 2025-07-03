@@ -6,6 +6,28 @@ const  fileUploadWrapper =document.querySelector(".file-upload-wrapper");
 const  fileCancelButton =document.querySelector("#file-cancel");
 const  chatbotToggler =document.querySelector("#chatbot-toggler");
 const  closeChatbot =document.querySelector("#close-chatbot");
+//Login and register links
+const wrapper=document.querySelector('.wrapper');
+const loginLink=document.querySelector('.login-link');
+const registerLink=document.querySelector('.register-link');
+const btnPopup=document.querySelector('.btnLogin-popup');
+const iconClose=document.querySelector('.icon-close');
+
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', () => {
+    wrapper.classList.add('active-popup');
+});
+
+iconClose.addEventListener('click', () => {
+    wrapper.classList.remove('active-popup');
+});
 //SETTING API KEY
 const API_KEY = "AIzaSyDwxK22XdALpgEaK5-3_vrhhOtutjJGELE";
 const API_URL=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
@@ -23,7 +45,7 @@ const initialInputHeight = messageInput.scrollHeight;
 //create message element with dynamic classes and return it
 const createMessageElement = (content, classes) =>{
     const div=document.createElement("div");
-    div.classList.add("message",classes);
+    div.classList.add("message", classes);
     div.innerHTML = content;
     return div;
 }
@@ -78,6 +100,7 @@ const generateBotResponse = async(incomingMessageDiv) =>{
 //Handling outgoing user messages
 const handleOutGoingMessage = (e) =>{
     e.preventDefault();
+     
     userData.message=messageInput.value.trim();
     messageInput.value= "";
     fileUploadWrapper.classList.remove("file-uploaded");
@@ -160,7 +183,7 @@ const picker = new EmojiMart.Picker({
   skinTonePosition: "none",
   previewPosition: "none",
   onEmojiSelect: (emoji) => {
-     const {selectiopnStart: start, selectionEnd: end} = messageInput;
+     const {selectionStart: start, selectionEnd: end} = messageInput;
      messageInput.setRangeText(emoji.native, start, end, "end");
      messageInput.focus();
   },
