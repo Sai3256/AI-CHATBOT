@@ -555,3 +555,71 @@ em-emoji-picker{
 body.show-emoji-picker em-emoji-picker{
     visibility: visible;
 }
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Changed from right: 35px */
+  z-index: 999;
+  background: #fff;
+  border: 2px solid #5350C4;
+  color: #5350C4;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+#theme-toggle:hover {
+  background: #5350C4;
+  color: #fff;
+}
+
+body.dark-mode #theme-toggle {
+  background: #222;
+  color: #eee;
+  border-color: #eee;
+}
+
+body.dark-mode {
+  background: linear-gradient(#1b1b2f, #1e1e2f);
+  color: #fff;
+}
+
+body.dark-mode .wrapper,
+body.dark-mode .chatbot-popup,
+body.dark-mode .chat-footer,
+body.dark-mode .chat-header,
+body.dark-mode .chat-body {
+  background-color: #1f1f2f;
+  color: #fff;
+}
+
+body.dark-mode .input-box input,
+body.dark-mode .input-box label,
+body.dark-mode .form-box h2,
+body.dark-mode .remember-forgot,
+body.dark-mode .login-register p,
+body.dark-mode .login-register a,
+body.dark-mode .chat-body .message .message-text {
+  color: #fff;
+}
+
+body.dark-mode .chat-body .bot-message .message-text {
+  background: #2d2d44;
+}
+
+body.dark-mode .chat-body .user-message .message-text {
+  background: #5350C4;
+}
+
+body.dark-mode .btnLogin-popup,
+body.dark-mode .btnLogin-popup:hover {
+  background: #2d2d44;
+  color: #eee;
+}
