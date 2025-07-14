@@ -204,3 +204,23 @@ chatbotToggler.addEventListener("click", () => document.body.classList.toggle
 ("show-chatbot"));
 closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 
+const themeToggleBtn = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+
+// Check local storage on load
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  themeIcon.textContent = "light_mode";
+}
+
+// Toggle dark mode
+themeToggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains("dark-mode");
+  themeIcon.textContent = isDark ? "light_mode" : "dark_mode";
+
+  // Save preference
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
