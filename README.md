@@ -1,23 +1,35 @@
 🤖 AI Chatbot Web App
-A modern AI-powered chatbot interface built with HTML, CSS, and JavaScript. The chatbot supports text messages, image uploads, emoji input, and displays real-time bot responses using an API.
+A modern, responsive AI-powered chatbot interface built with HTML, CSS, and JavaScript, designed for an engaging and intuitive user experience across devices.
 
-🌟 Features
-Toggleable chatbot popup UI
+🌟 Key Features:
+✅ Toggleable Chatbot Popup UI
+– Easily open or hide the chatbot widget.
 
-Custom styled chat interface with animations
+✅ Custom-Styled Chat Interface with Animations
+– Sleek and animated layout with smooth UX transitions.
 
-Supports sending:
+✅ Multi-Modal Input Support
+– Send messages in various formats:
+    📝 Text messages
+    🖼️ Image file uploads (with preview)
+    😊 Emoji picker powered by Emoji Mart
 
-Text messages
+✅ Bot Replies with Typing Animation
+– Displays a "thinking..." effect before showing real-time bot responses.
 
-Image files (preview included)
+✅ Gemini API Integration
+– Fetches intelligent AI responses using Google's Gemini API.
 
-Emojis using Emoji Mart picker
+✅ User Authentication System
+– Login and Register pages with form validation and secure user flow.
 
-Displays bot replies with a "thinking..." typing animation
+✅ Light / Dark Mode Toggle
+– Switch between themes to match your style or device preferences.
 
-Used Gemini API integration to fetch chatbot responses
+✅ Responsive Design
+– Fully optimized for both desktop and mobile viewing.
 
-Responsive design for desktop and mobile
-
-Smooth scrolling and dynamic input height adjustment
+✅ Enhanced Usability
+– Dynamic input field height
+– Smooth scrolling to latest messages
+– Persistent chat session
