@@ -2,6 +2,7 @@
 A modern, responsive AI-powered chatbot interface built with HTML, CSS, and JavaScript, designed for an engaging and intuitive user experience across devices.
 
 🌟 Key Features:
+
 ✅ Toggleable Chatbot Popup UI
 – Easily open or hide the chatbot widget.
 
